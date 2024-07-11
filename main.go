@@ -9,7 +9,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -33,7 +33,8 @@ func main() {
 	router.GET("/favicon.ico", func(c *gin.Context) {
 		c.File("./static/favicon.ico")
 	})
-
+	password := "superSecret"
+	fmt.Println(password)
 	router.Run()
 }
 
